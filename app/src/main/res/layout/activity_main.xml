@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/on_peak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="120dp"
+        android:text="On-Peak Usage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_on_peak"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintBottom_toBottomOf="@id/on_peak"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/on_peak"
+        app:layout_constraintTop_toTopOf="@id/on_peak"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <TextView
+        android:id="@+id/off_peak"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="Off-Peak Usage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/on_peak" />
+
+    <EditText
+        android:id="@+id/edit_off_peak"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/off_peak"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@id/off_peak"
+        app:layout_constraintTop_toTopOf="@id/off_peak"
+        app:layout_constraintVertical_bias="0.576" />
+
+    <TextView
+        android:id="@+id/mid_peak"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="Mid-Peak Usage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/off_peak" />
+
+    <EditText
+        android:id="@+id/edit_mid_peak"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/mid_peak"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@id/mid_peak"
+        app:layout_constraintTop_toTopOf="@id/mid_peak"
+        app:layout_constraintVertical_bias="0.576" />
+
+    <Button
+        android:id="@+id/btn_cal_hydro"
+        android:layout_width="412dp"
+        android:layout_height="42dp"
+        android:backgroundTint="#d3d3d3"
+        android:text="Calculate Hydro"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mid_peak"
+        app:layout_constraintVertical_bias="0.053" />
+
+
+    <TextView
+        android:id="@+id/hydro_charges"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Hydro Consumption Charges"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_cal_hydro"
+        app:layout_constraintTop_toTopOf="@id/btn_cal_hydro"
+        app:layout_constraintVertical_bias="0.228"
+        tools:layout_editor_absoluteX="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
