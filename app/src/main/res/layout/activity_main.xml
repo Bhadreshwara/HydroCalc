@@ -35,7 +35,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="36dp"
         android:text="Off-Peak Usage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/on_peak" />
@@ -57,7 +57,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="36dp"
         android:text="Mid-Peak Usage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/off_peak" />
@@ -98,6 +98,110 @@
         app:layout_constraintTop_toBottomOf="@id/btn_cal_hydro"
         app:layout_constraintTop_toTopOf="@id/btn_cal_hydro"
         app:layout_constraintVertical_bias="0.228"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/hydro_charges_total"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/hydro_charges"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@id/hydro_charges"
+        app:layout_constraintTop_toTopOf="@id/hydro_charges"
+        app:layout_constraintVertical_bias="0.576" />
+
+    <TextView
+        android:id="@+id/on_peak_charge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:text="On-Peak Usage"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="@id/hydro_charges" />
+
+    <TextView
+        android:id="@+id/off_peak_charge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:text="Off-Peak Usage"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="@id/on_peak_charge" />
+
+    <TextView
+        android:id="@+id/mid_peak_charge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:text="Mid-Peak Usage"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="@id/off_peak_charge" />
+
+    <TextView
+        android:id="@+id/regular_charges"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Total Regulatory Charges"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mid_peak_charge"
+        app:layout_constraintTop_toTopOf="@id/mid_peak_charge"
+        app:layout_constraintVertical_bias="0.228"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/regular_charges_total"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/regular_charges"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@id/regular_charges"
+        app:layout_constraintTop_toTopOf="@id/regular_charges"
+        app:layout_constraintVertical_bias="0.576" />
+
+    <TextView
+        android:id="@+id/hst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:text="HST"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="@id/regular_charges" />
+
+    <TextView
+        android:id="@+id/provincial_rebate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:text="Provincial Rebate"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="@id/hst" />
+
+    <TextView
+        android:id="@+id/total_bill"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Total Bill Amount to Pay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/provincial_rebate"
+        app:layout_constraintTop_toTopOf="@id/provincial_rebate"
+        app:layout_constraintVertical_bias="0.486"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
