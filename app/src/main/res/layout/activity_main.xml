@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="3dp"
+    tools:layout_editor_absoluteY="-42dp">
 
     <TextView
         android:id="@+id/on_peak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="76dp"
         android:text="On-Peak Usage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,17 +27,17 @@
 
         app:layout_constraintBottom_toBottomOf="@id/on_peak"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.437"
         app:layout_constraintStart_toEndOf="@id/on_peak"
         app:layout_constraintTop_toTopOf="@id/on_peak"
-        app:layout_constraintVertical_bias="0.666" />
+        app:layout_constraintVertical_bias="0.571" />
 
     <TextView
         android:id="@+id/off_peak"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
         android:text="Off-Peak Usage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/on_peak" />
@@ -47,17 +49,17 @@
         android:layout_margin="16dp"
         app:layout_constraintBottom_toBottomOf="@id/off_peak"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.343"
         app:layout_constraintStart_toEndOf="@id/off_peak"
         app:layout_constraintTop_toTopOf="@id/off_peak"
-        app:layout_constraintVertical_bias="0.576" />
+        app:layout_constraintVertical_bias="0.615" />
 
     <TextView
         android:id="@+id/mid_peak"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
         android:text="Mid-Peak Usage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/off_peak" />
@@ -69,10 +71,10 @@
         android:layout_margin="16dp"
         app:layout_constraintBottom_toBottomOf="@id/mid_peak"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/mid_peak"
         app:layout_constraintTop_toTopOf="@id/mid_peak"
-        app:layout_constraintVertical_bias="0.576" />
+        app:layout_constraintVertical_bias="0.461" />
 
     <Button
         android:id="@+id/btn_cal_hydro"
@@ -83,10 +85,10 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.564"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/mid_peak"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.054" />
 
 
     <TextView
@@ -97,9 +99,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_cal_hydro"
         app:layout_constraintTop_toTopOf="@id/btn_cal_hydro"
-        app:layout_constraintVertical_bias="0.228"
-        tools:layout_editor_absoluteX="16dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.147"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="22dp" />
 
     <EditText
         android:id="@+id/hydro_charges_total"
@@ -108,43 +110,42 @@
         android:layout_margin="16dp"
         app:layout_constraintBottom_toBottomOf="@id/hydro_charges"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toEndOf="@id/hydro_charges"
         app:layout_constraintTop_toTopOf="@id/hydro_charges"
-        app:layout_constraintVertical_bias="0.576" />
+        app:layout_constraintVertical_bias="0.538" />
 
     <TextView
         android:id="@+id/on_peak_charge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="56dp"
         android:text="On-Peak Usage"
-        app:layout_constraintStart_toStartOf="parent"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/hydro_charges" />
-
-    <TextView
-        android:id="@+id/off_peak_charge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
-        android:text="Off-Peak Usage"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="@id/on_peak_charge" />
 
     <TextView
         android:id="@+id/mid_peak_charge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="36dp"
         android:text="Mid-Peak Usage"
-        app:layout_constraintStart_toStartOf="parent"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/off_peak_charge" />
+
+    <TextView
+        android:id="@+id/off_peak_charge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:text="Off-Peak Usage"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/on_peak_charge" />
 
     <TextView
         android:id="@+id/regular_charges"
@@ -154,9 +155,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/mid_peak_charge"
         app:layout_constraintTop_toTopOf="@id/mid_peak_charge"
-        app:layout_constraintVertical_bias="0.228"
-        tools:layout_editor_absoluteX="16dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.17"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="20dp" />
 
     <EditText
         android:id="@+id/regular_charges_total"
@@ -168,29 +169,29 @@
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toEndOf="@id/regular_charges"
         app:layout_constraintTop_toTopOf="@id/regular_charges"
-        app:layout_constraintVertical_bias="0.576" />
-
-    <TextView
-        android:id="@+id/hst"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
-        android:text="HST"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="@id/regular_charges" />
+        app:layout_constraintVertical_bias="0.538" />
 
     <TextView
         android:id="@+id/provincial_rebate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
         android:text="Provincial Rebate"
-        app:layout_constraintStart_toStartOf="parent"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/hst" />
+
+    <TextView
+        android:id="@+id/hst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="52dp"
+        android:text="HST"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/regular_charges" />
 
     <TextView
         android:id="@+id/total_bill"
@@ -200,8 +201,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/provincial_rebate"
         app:layout_constraintTop_toTopOf="@id/provincial_rebate"
-        app:layout_constraintVertical_bias="0.486"
+        app:layout_constraintVertical_bias="0.329"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp" />
+        tools:layout_editor_absoluteX="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
