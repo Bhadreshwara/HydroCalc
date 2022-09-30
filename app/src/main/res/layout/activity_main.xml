@@ -4,16 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    tools:layout_editor_absoluteX="3dp"
-    tools:layout_editor_absoluteY="-42dp">
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/on_peak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
         android:text="On-Peak Usage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,187 +20,234 @@
         android:id="@+id/edit_on_peak"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="8dp"
         android:layout_marginTop="16dp"
-
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="@id/on_peak"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.437"
-        app:layout_constraintStart_toEndOf="@id/on_peak"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toEndOf="@+id/on_peak"
         app:layout_constraintTop_toTopOf="@id/on_peak"
-        app:layout_constraintVertical_bias="0.571" />
+        app:layout_constraintVertical_bias="0.642" />
 
     <TextView
         android:id="@+id/off_peak"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:text="Off-Peak Usage"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/on_peak" />
+        app:layout_constraintTop_toBottomOf="@id/on_peak" />
 
     <EditText
         android:id="@+id/edit_off_peak"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="16dp"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="@id/off_peak"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.343"
-        app:layout_constraintStart_toEndOf="@id/off_peak"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toEndOf="@+id/off_peak"
         app:layout_constraintTop_toTopOf="@id/off_peak"
-        app:layout_constraintVertical_bias="0.615" />
+        app:layout_constraintVertical_bias="0.642" />
 
     <TextView
         android:id="@+id/mid_peak"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:text="Mid-Peak Usage"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/off_peak" />
+        app:layout_constraintTop_toBottomOf="@id/off_peak" />
 
     <EditText
         android:id="@+id/edit_mid_peak"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="16dp"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="@id/mid_peak"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@id/mid_peak"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toEndOf="@+id/mid_peak"
         app:layout_constraintTop_toTopOf="@id/mid_peak"
-        app:layout_constraintVertical_bias="0.461" />
+        app:layout_constraintVertical_bias="0.642" />
 
     <Button
         android:id="@+id/btn_cal_hydro"
-        android:layout_width="412dp"
-        android:layout_height="42dp"
-        android:backgroundTint="#d3d3d3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="444dp"
+        android:backgroundTint="#ede9e6"
         android:text="Calculate Hydro"
         android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.564"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mid_peak"
-        app:layout_constraintVertical_bias="0.054" />
-
+        app:layout_constraintTop_toBottomOf="@id/edit_mid_peak"
+        app:layout_constraintVertical_bias="0.765" />
 
     <TextView
-        android:id="@+id/hydro_charges"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Hydro Consumption Charges"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/hydro_charge"
+        android:layout_width="226dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:background="#E91E63"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:text="Hydro Consumption Charge"
+        app:layout_constraintStart_toEndOf="@id/hydro_charge"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_cal_hydro"
-        app:layout_constraintTop_toTopOf="@id/btn_cal_hydro"
-        app:layout_constraintVertical_bias="0.147"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="22dp" />
+        />
 
-    <EditText
-        android:id="@+id/hydro_charges_total"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:layout_constraintBottom_toBottomOf="@id/hydro_charges"
+    <TextView
+        android:id="@+id/hyd_charge"
+        android:layout_width="150dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:background="#E91E63"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hydro_charge"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/hydro_charges"
-        app:layout_constraintTop_toTopOf="@id/hydro_charges"
-        app:layout_constraintVertical_bias="0.538" />
+        app:layout_constraintTop_toBottomOf="@id/btn_cal_hydro"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/on_peak_charge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="56dp"
-        android:text="On-Peak Usage"
-
+        android:id="@+id/tv_charge2"
+        android:layout_width="224dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text=""
+        android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/hydro_charges" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_charge1" />
 
     <TextView
-        android:id="@+id/mid_peak_charge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="36dp"
-        android:text="Mid-Peak Usage"
-
+        android:id="@+id/tv_charge1"
+        android:layout_width="224dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text=""
+        android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/off_peak_charge" />
+        app:layout_constraintTop_toBottomOf="@id/hydro_charge" />
 
     <TextView
-        android:id="@+id/off_peak_charge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="36dp"
-        android:text="Off-Peak Usage"
-
+        android:id="@+id/tv_charge3"
+        android:layout_width="224dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text=""
+        android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/on_peak_charge" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_charge2" />
 
     <TextView
-        android:id="@+id/regular_charges"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Total Regulatory Charges"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mid_peak_charge"
-        app:layout_constraintTop_toTopOf="@id/mid_peak_charge"
-        app:layout_constraintVertical_bias="0.17"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="20dp" />
+        android:id="@+id/tv_totalRegCharge"
+        android:layout_width="226dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:background="#E91E63"
+        android:gravity="center"
+        android:text="@string/total_regulatory_charge"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_charge3" />
 
-    <EditText
-        android:id="@+id/regular_charges_total"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:layout_constraintBottom_toBottomOf="@id/regular_charges"
+    <TextView
+        android:id="@+id/tv_regTotal"
+        android:layout_width="150dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="4dp"
+        android:background="#E91E63"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toEndOf="@id/regular_charges"
-        app:layout_constraintTop_toTopOf="@id/regular_charges"
-        app:layout_constraintVertical_bias="0.538" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_charge3" />
 
     <TextView
-        android:id="@+id/provincial_rebate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="40dp"
-        android:text="Provincial Rebate"
-
+        android:id="@+id/tv_hst"
+        android:layout_width="224dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.021"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/hst" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_totalRegCharge" />
 
     <TextView
-        android:id="@+id/hst"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="52dp"
-        android:text="HST"
-
+        android:id="@+id/tv_provincial_rebate"
+        android:layout_width="224dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/regular_charges" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_hst" />
 
     <TextView
-        android:id="@+id/total_bill"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Total Bill Amount to Pay"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/provincial_rebate"
-        app:layout_constraintTop_toTopOf="@id/provincial_rebate"
-        app:layout_constraintVertical_bias="0.329"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="20dp" />
+        android:id="@+id/tv_total"
+        android:layout_width="225dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:background="#E91E63"
+        android:gravity="center"
+        android:text="@string/total_bill_amount_to_pay"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_provincial_rebate" />
 
+    <TextView
+        android:id="@+id/tv_totAmount"
+        android:layout_width="143dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:background="#E91E63"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_provincial_rebate" />
 </androidx.constraintlayout.widget.ConstraintLayout>
