@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">HydroCalc</string>
+    <string name="hydro_consumption_charge">Hydro Consumption Charge</string>
+
+    <string name="off_peak_usage">OFF-Peak Usage</string>
+    <string name="hydrocalc">HydroCalc</string>
+    <string name="mid_peak_usage">Mid-Peak Usage</string>
+    <string name="on_peak_usage">On-Peak Usage</string>
+    <string name="calculate_hydro">CALCULATE HYDRO</string>
+    <string name="charge">charge</string>
+    <string name="reg_total">Reg Total</string>
+    <string name="total_regulatory_charge">Total Regulatory Charge</string>
+    <string name="total_bill_amount_to_pay">Total Bill Amount To Pay</string>
+    <string name="total">Total</string>
 </resources>
